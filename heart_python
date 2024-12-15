@@ -1,0 +1,35 @@
+import turtle
+
+# code by vk_devz 
+
+# Create screen and turtle object
+screen = turtle.Screen()
+screen.setup(width=800, height=600)
+screen.bgcolor("white")
+
+# Create the turtle object
+t = turtle.Turtle()
+t.speed(3)  # Adjust speed (1: slow, 10: fast)
+t.color("red")
+
+# Function to draw a heart
+def draw_heart():
+    t.begin_fill()
+    t.fillcolor("red")
+    
+    t.left(50)  # Angle to start the left curve
+    t.forward(133)  # Length of the first line
+    t.circle(50, 200)  # Draw the left curve
+    t.right(140)  # Turn to start the right curve
+    t.circle(50, 200)  # Draw the right curve
+    t.forward(133)  # Complete the bottom line
+    t.end_fill()
+
+# Draw the heart
+draw_heart()
+
+# Hide the turtle and display
+t.hideturtle()
+
+# Keep the window open
+turtle.done()
